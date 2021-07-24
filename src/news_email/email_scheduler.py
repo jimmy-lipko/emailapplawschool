@@ -13,8 +13,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 def emailer(name, reciever_email,sender_email, pwd):
-    date = date.today()
-    today = date.strftime("%B %d, %Y")
+    dater = date.today()
+    today = dater.strftime("%B %d, %Y")
     subject = "Good Morning" + str(name) + "Here is your news for " + str(today) + "."
 
 

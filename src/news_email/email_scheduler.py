@@ -249,7 +249,7 @@ def emailer(name, reciever_email,sender_email, pwd):
           <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
 
       <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-        <p style="font-size: 14px; line-height: 140%; text-align: left;"><span style="font-size: 18px; line-height: 25.2px;">Good Morning Zoe, </span></p>
+        <p style="font-size: 14px; line-height: 140%; text-align: left;"><span style="font-size: 18px; line-height: 25.2px;">Good Morning """ + str(name) + """, </span></p>
     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
     <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 18px; line-height: 25.2px;">Today is """ + str(today) +""".</span></p>
     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>

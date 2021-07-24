@@ -15,7 +15,7 @@ from email.mime.text import MIMEText
 def emailer(name, receiver_email,sender_email, pwd):
     dater = date.today()
     today = dater.strftime("%B %d, %Y")
-    subject = "Good Morning" + str(name) + "Here is your news for " + str(today) + "."
+    subject = "Good Morning " + str(name) + ". Here is your news for " + str(today) + "."
 
 
     message = MIMEMultipart("alternative")

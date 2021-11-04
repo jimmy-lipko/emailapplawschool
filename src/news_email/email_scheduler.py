@@ -41,15 +41,6 @@ def emailer(name, receiver_email,sender_email, pwd):
 
     fox_link = article_fox[0].find("a").attrs['href']
 
-    result_reuters = requests.get("https://www.reuters.com/legal/")
-    page_content_reuters = result_reuters.content
-    soup_reuters = BeautifulSoup(page_content_reuters, 'lxml')
-    reuters_article = [soup_reuters.find(lambda tag: tag.name == 'a' and
-                                       tag.get('class') == ['MediaStoryCard__basic_hero___fSAEnM'])]
-
-    reuters_title = reuters_article[0].find(lambda tag: tag.name == 'span' and
-                                       tag.get('class') == ['MediaStoryCard__title___2PHMeX']).contents[0]
-    reuters_link = 'https://www.reuters.com' + str(reuters_article[0].attrs['href'])
 
     result_religion = requests.get('https://www.ncregister.com/')
     page_content_religion = result_religion.content
@@ -260,9 +251,6 @@ def emailer(name, receiver_email,sender_email, pwd):
     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
     <p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Fox Business</span></strong></p>
     <p style="font-size: 14px; line-height: 140%;"><a href=" """+ str(fox_link) +""" " target="_blank" rel="noopener">"""+ str(fox_title) +"""</a></p>
-    <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
-    <p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Law Article - Reuters</span></strong></p>
-    <p style="font-size: 14px; line-height: 140%;"><a href=" """+ str(reuters_link) +""" " target="_blank" rel="noopener">"""+ str(reuters_title) +"""</a></p>
     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
     <p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 20px; line-height: 28px;">Religion</span></strong></p>
     <p style="font-size: 14px; line-height: 140%;"><a href=" """+ str(religion_link) +""" " target="_blank" rel="noopener">"""+ str(religion_title) +"""</a></p>
